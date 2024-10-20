@@ -1,9 +1,7 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+DataPoint.create([
+  { value: 5, recorded_at: Time.current - 5.days },
+  { value: 10, recorded_at: Time.current - 4.days },
+  { value: 7, recorded_at: Time.current - 3.days },
+  { value: 8, recorded_at: Time.current - 2.days },
+  { value: 12, recorded_at: Time.current - 1.day }
+])
