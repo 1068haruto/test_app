@@ -1,0 +1,19 @@
+<h1>データポイントを追加</h1>
+
+<%= form_with model: @data_point, local: true do |form| %>
+  <div>
+    <%= form.label :value, '値' %>
+    <%= form.number_field :value %>
+  </div>
+
+  <div>
+    <%= form.label :recorded_at, '記録日時' %>
+    <%= form.datetime_local_field :recorded_at %>
+  </div>
+
+  <div>
+    <%= form.submit '追加' %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', data_points_path %>
