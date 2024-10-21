@@ -1,3 +1,2 @@
 <h1>データポイントの折れ線グラフ</h1>
-<%= line_chart @data_points %>
-<%= link_to '新しいデータポイントを追加', new_data_point_path %>
+<%= line_chart({"2021-01-01" => 2, "2021-01-02" => 3}) %>
