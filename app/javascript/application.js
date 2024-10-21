@@ -2,8 +2,9 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
-import Chartkick from "chartkick"
-import Chart from "chart.js/auto"  // 修正箇所
+import "chartkick"
+import "Chart.bundle"
+import "chartkick/chart.js"
 
 // ChartkickにChart.jsを設定
 Chartkick.use(Chart)
